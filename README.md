@@ -1,16 +1,144 @@
-# React + Vite
+# Chia-Yu Wei | Data Analytics Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional portfolio website showcasing projects in:
 
-Currently, two official plugins are available:
+* Data Science
+* Machine Learning
+* Healthcare Analytics
+* Actuarial Analytics
+* Supply Chain & Operations Intelligence
+* Manufacturing Automation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live Website
 
-## React Compiler
+Portfolio Website:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://YOUR_GITHUB_PAGES_LINK
 
-## Expanding the ESLint configuration
+## Featured Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Actuarial Reserve Analytics Platform
+
+Interactive actuarial analytics platform for reserve valuation, mortality analysis, reinsurance exposure evaluation, and scenario testing.
+
+**Technologies**
+
+* Python
+* Streamlit
+* Pandas
+* Plotly
+* Actuarial Modeling
+
+---
+
+### AI-Powered Adaptive Learning Platform
+
+Adaptive testing platform with knowledge-gap identification and AI-assisted remediation generation.
+
+**Technologies**
+
+* Python
+* Streamlit
+* PostgreSQL
+* OpenAI API
+* Machine Learning
+
+---
+
+### U.S. Drug Demand Intelligence Dashboard
+
+Healthcare analytics platform for Medicaid drug utilization analysis, state-level demand intelligence, and forecasting.
+
+**Technologies**
+
+* Python
+* Streamlit
+* Prophet
+* Healthcare Analytics
+
+---
+
+### Intelligent Dock Scheduling Simulation
+
+Discrete-event logistics simulation for dock assignment optimization and truck scheduling analysis.
+
+**Technologies**
+
+* Python
+* Simulation Modeling
+* Supply Chain Analytics
+
+## Technical Skills
+
+### Programming
+
+* Python
+* SQL
+* JavaScript
+* HTML
+* CSS
+
+### Data Science & Analytics
+
+* Machine Learning
+* Predictive Modeling
+* Time Series Forecasting
+* Statistical Analysis
+* Data Visualization
+
+### Business Intelligence
+
+* Power BI
+* Dashboard Design
+* KPI Development
+
+### Operations Intelligence
+
+* Supply Chain Analytics
+* RFID Tracking
+* JIS Logistics
+* Warehouse Automation
+* ASRS Systems
+
+### Actuarial Analytics
+
+* Reserve Modeling
+* Reinsurance Analytics
+* Risk Analysis
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build production version:
+
+```bash
+npm run build
+```
+
+Deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Contact
+
+LinkedIn:
+https://www.linkedin.com/in/chia-yu-wei
+
+GitHub:
+https://github.com/ChiayuuW
+
+Email:
+[your_email@example.com](mailto:your_email@example.com)
