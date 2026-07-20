@@ -11,9 +11,7 @@ Professional portfolio website showcasing projects in:
 
 ## Live Website
 
-Portfolio Website:
-
-https://YOUR_GITHUB_PAGES_LINK
+Portfolio Website: [https://chiayuuw.github.io/portfolio/](https://chiayuuw.github.io/portfolio/)
 
 ## Featured Projects
 
@@ -141,4 +139,4 @@ GitHub:
 https://github.com/ChiayuuW
 
 Email:
-[your_email@example.com](mailto:your_email@example.com)
+[chiayuwei16@gmail.com](mailto:chiayuwei16@gmail.com)
