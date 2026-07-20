@@ -254,7 +254,7 @@ const projects = [
     github: "https://github.com/ChiayuuW/Adaptive-Learning-Platform",
     liveDemo:
       "https://adaptive-learning-platform-kflvrjw6gz4ukmksaeewpm.streamlit.app/",
-    image: assetPath("adaptive-learning-preview.png"),
+    image: assetPath("adaptive-learning-architecture.png"),
     architectureImage: assetPath("adaptive-learning-architecture.png"),
     overview:
       "This project is an AI-powered adaptive learning platform designed to support personalized education through knowledge-gap identification, adaptive review logic, and LLM-generated remediation content.",
