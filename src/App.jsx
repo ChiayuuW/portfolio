@@ -12,6 +12,8 @@ import {
   FaLaptopCode,
 } from "react-icons/fa";
 import "./App.css";
+const assetPath = (fileName) =>
+  `${import.meta.env.BASE_URL}${fileName}`;
 
 const projects = [
   {
@@ -28,8 +30,8 @@ const projects = [
       "HTML Canvas",
       "Logistics Analytics",
     ],
-    liveDemo: "/Simulation.html",
-    image: "/dock-simulation-preview.png",
+    liveDemo: assetPath("Simulation.html"),
+    image: assetPath("dock-simulation-preview.png"),
     overview:
       "This project is an interactive dock scheduling optimization simulator designed to evaluate inbound truck flow, dock assignment decisions, queue behavior, and operational bottlenecks in a warehouse environment. The system combines Python-based scheduling algorithms with an HTML simulation interface to compare scheduling strategies and visualize how different dispatching rules affect truck wait time, dock utilization, and throughput.",
     problem:
@@ -97,8 +99,8 @@ const projects = [
     github: "https://github.com/ChiayuuW/life-insurance-reserve-engine",
     liveDemo:
       "https://life-insurance-reserve-engine-buyc84aafnkwtvnvgco5fe.streamlit.app/",
-    image: "/reserve-engine-demo.png",
-    architectureImage: "/actuarial-platform-architecture.png",
+    image: assetPath("reserve-engine-demo.png"),
+    architectureImage: assetPath("actuarial-platform-architecture.png"),
     overview:
       "This project is an end-to-end actuarial analytics platform designed to support life insurance reserve valuation, mortality analysis, and reinsurance evaluation. The system combines actuarial calculation engines with interactive dashboards to help users analyze portfolio risk, policy-level valuation results, and assumption sensitivity in a more transparent and operationally efficient workflow.",
     problem:
@@ -171,9 +173,9 @@ const projects = [
     ],
     previewTitle: "Model Results Preview",
     previewImages: [
-      "/exchange-forecast.png",
-      "/exchange-ml.png",
-      "/exchange-hybrid.png",
+      assetPath("exchange-forecast.png"),
+      assetPath("exchange-ml.png"),
+      assetPath("exchange-hybrid.png"),
     ],
     impactTitle: "Key Findings & Business Insights",
     results: [
@@ -215,9 +217,9 @@ const projects = [
     tech: ["Power BI", "DAX", "Power Query", "Data Visualization"],
     github: "https://github.com/ChiayuuW/Power-BI-Profolio",
     previewImages: [
-      "/powerbi-sales-dashboard.png",
-      "/powerbi-survey-dashboard.png",
-      "/powerbi-insurance-dashboard.png",
+      assetPath("powerbi-sales-dashboard.png"),
+      assetPath("powerbi-survey-dashboard.png"),
+      assetPath("powerbi-insurance-dashboard.png"),
     ],
     overview:
       "This project is a Power BI dashboard portfolio focused on transforming raw business data into interactive reports, KPI summaries, and decision-ready visual insights.",
@@ -271,8 +273,8 @@ const projects = [
     github: "https://github.com/ChiayuuW/Adaptive-Learning-Platform",
     liveDemo:
       "https://adaptive-learning-platform-kflvrjw6gz4ukmksaeewpm.streamlit.app/",
-    image: "/adaptive-learning-preview.png",
-    architectureImage: "/adaptive-learning-architecture.png",
+    image: assetPath("adaptive-learning-preview.png"),
+    architectureImage: assetPath("adaptive-learning-architecture.png"),
     overview:
       "This project is an AI-powered adaptive learning platform designed to support personalized education through knowledge-gap identification, adaptive review logic, and LLM-generated remediation content.",
     problem:
@@ -358,9 +360,9 @@ const projects = [
     previewTitle: "Dashboard Preview",
 
     previewImages: [
-      "/med-market-overview.png",
-      "/med-state-intelligence.png",
-      "/med-demand-forecast.png",
+      assetPath("med-market-overview.png"),
+      assetPath("med-state-intelligence.png"),
+      assetPath("med-demand-forecast.png"),
     ],
     impactTitle: "Healthcare Analytics & Business Value",
     results: [
@@ -799,7 +801,12 @@ function HomePage({ setCurrentPage }) {
             <button className="primary-btn" onClick={() => setCurrentPage("projects")}>
               View Projects
             </button>
-            <a href="/resume.pdf" className="secondary-btn" target="_blank" rel="noreferrer">
+            <a
+              href={assetPath("resume.pdf")}
+              className="secondary-btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               Resume
             </a>
           </div>
@@ -807,7 +814,10 @@ function HomePage({ setCurrentPage }) {
 
         <div className="hero-card">
           <div className="profile-circle">
-            <img src="/profile.jpg" alt="Chia-Yu Wei" />
+            <img
+              src={assetPath("profile.jpg")}
+              alt="Chia-Yu Wei"
+            />
           </div>
 
           <div className="status-card">
