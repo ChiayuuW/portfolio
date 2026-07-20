@@ -246,25 +246,6 @@ const projects = [
     ],
   },
   {
-    title: "Insurance Cross-Sell Prediction System",
-    subtitle: "Machine learning project for insurance customer cross-sell prediction.",
-    description:
-      "An end-to-end ML project predicting whether health insurance customers may buy vehicle insurance.",
-    tech: ["Python", "Machine Learning", "EDA", "Classification"],
-    github: "https://github.com/ChiayuuW/Health-to-Vehicle-Insurance-Cross-Sell",
-    overview:
-      "This project analyzes customer data and builds classification models to predict cross-sell opportunities in insurance.",
-    problem:
-      "Insurance companies need to identify which customers are more likely to respond to cross-sell offers so marketing resources can be used more effectively.",
-    approach:
-      "The project includes EDA, feature analysis, model training, model comparison, and evaluation using classification metrics.",
-    results: [
-      "Built an end-to-end classification workflow.",
-      "Compared multiple machine learning models.",
-      "Identified important features related to customer response.",
-    ],
-  },
-  {
     title: "AI-Powered Adaptive Learning Platform",
     subtitle: "Streamlit-based adaptive learning system with LLM-generated remediation support.",
     description:
@@ -395,6 +376,25 @@ const projects = [
         ]
       }
     ]
+  },
+  {
+    title: "Insurance Cross-Sell Prediction System",
+    subtitle: "Machine learning project for insurance customer cross-sell prediction.",
+    description:
+      "An end-to-end ML project predicting whether health insurance customers may buy vehicle insurance.",
+    tech: ["Python", "Machine Learning", "EDA", "Classification"],
+    github: "https://github.com/ChiayuuW/Health-to-Vehicle-Insurance-Cross-Sell",
+    overview:
+      "This project analyzes customer data and builds classification models to predict cross-sell opportunities in insurance.",
+    problem:
+      "Insurance companies need to identify which customers are more likely to respond to cross-sell offers so marketing resources can be used more effectively.",
+    approach:
+      "The project includes EDA, feature analysis, model training, model comparison, and evaluation using classification metrics.",
+    results: [
+      "Built an end-to-end classification workflow.",
+      "Compared multiple machine learning models.",
+      "Identified important features related to customer response.",
+    ],
   },
   {
     title: "A/B Testing Fast Food Marketing Campaign",
@@ -1008,37 +1008,54 @@ function ProjectsPage({ showMore, setShowMore, setSelectedProject }) {
       </div>
 
       <div className="project-grid">
-        {visibleProjects.map((project) => (
-          <button
-            className="project-card"
-            key={project.title}
-            onClick={() => setSelectedProject(project)}
-          >
-            {(project.image || project.previewImages?.[0]) && (
-              <img
-                src={project.image || project.previewImages[0]}
-                alt={`${project.title} preview`}
-                className="project-card-image"
-              />
-            )}
+        {visibleProjects.map((project) => {
+          const coverImage =
+            project.image || project.previewImages?.[0];
 
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+          return (
+            <button
+              className={`project-card ${
+                coverImage
+                  ? "project-card-with-image"
+                  : "project-card-compact"
+              }`}
+              key={project.title}
+              onClick={() => setSelectedProject(project)}
+            >
+              {coverImage && (
+                <img
+                  src={coverImage}
+                  alt={`${project.title} preview`}
+                  className="project-card-image"
+                />
+              )}
 
-            <div className="tech-list">
-              {project.tech.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
+              <div className="project-card-content">
+                <h3>{project.title}</h3>
 
-            <span className="project-card-action">View Details →</span>
-          </button>
-        ))}
+                <p>{project.description}</p>
+
+                <div className="tech-list">
+                  {project.tech.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+
+                <span className="project-card-action">
+                  View Details →
+                </span>
+              </div>
+            </button>
+          );
+        })}
       </div>
 
       {projects.length > 6 && (
         <div className="view-more-wrapper">
-          <button onClick={() => setShowMore(!showMore)} className="view-more">
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="view-more"
+          >
             {showMore ? "Show Less" : "View More"}
           </button>
         </div>
