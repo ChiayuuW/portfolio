@@ -1009,7 +1009,19 @@ function ProjectsPage({ showMore, setShowMore, setSelectedProject }) {
 
       <div className="project-grid">
         {visibleProjects.map((project) => (
-          <button className="project-card" key={project.title} onClick={() => setSelectedProject(project)}>
+          <button
+            className="project-card"
+            key={project.title}
+            onClick={() => setSelectedProject(project)}
+          >
+            {(project.image || project.previewImages?.[0]) && (
+              <img
+                src={project.image || project.previewImages[0]}
+                alt={`${project.title} preview`}
+                className="project-card-image"
+              />
+            )}
+
             <h3>{project.title}</h3>
             <p>{project.description}</p>
 
