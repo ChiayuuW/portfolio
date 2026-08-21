@@ -807,7 +807,7 @@ function HomePage({ setCurrentPage }) {
               target="_blank"
               rel="noreferrer"
             >
-              Resume
+              View Resume
             </a>
           </div>
         </div>
